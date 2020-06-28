@@ -19,3 +19,12 @@ const Route = use('Route')
 Route.get('/', () => {
   return { greeting: 'Hello world in JSON' }
 })
+
+// Route.get((url, 'ProductController.productList'), async ({ response }) => {
+//   const users = await User.all()
+//   response.send(users)
+// })
+
+
+Route.get('test', 'ProductController.index')
+Route.get('get-products', 'ProductController.productList')
